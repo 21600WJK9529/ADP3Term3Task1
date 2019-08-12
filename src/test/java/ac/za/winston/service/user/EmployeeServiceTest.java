@@ -50,7 +50,7 @@ public class EmployeeServiceTest {
         service.create(employee);
         System.out.println(service.read("TestEmpNo"));
 
-        Employee employeeUpdated = EmployeeFactory.buildEmployee("TestEmpNoUp", "TestFirstNameUp", "TestSurnameUp", "TestGenderUp","TestRaceUp");
+        Employee employeeUpdated = EmployeeFactory.buildEmployee("TestEmpNo", "TestFirstNameUp", "TestSurnameUp", "TestGenderUp","TestRaceUp");
         service.update(employeeUpdated);
         Employee em = service.read("TestEmpNo");
         assertNotEquals(employee.getSurname(), em.getSurname());
